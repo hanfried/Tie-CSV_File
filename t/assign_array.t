@@ -14,6 +14,7 @@ tie my @file, 'Tie::CSV_File', $fname;
 
 @file = @{CSV_DATA()};
 
+print STDERR "$fname\n";
 is_deeply 
     \@file, CSV_DATA(), 
     'Checked an assignment like @data = @anotherarray';
